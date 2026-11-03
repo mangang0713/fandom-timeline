@@ -27,11 +27,11 @@
           <h1 id="hero-heading">내 최애의<br/><em>역사</em>를 분석해 봐<span class="period">.</span></h1>
           <p class="hero-lead">누구를 언제 좋아했는지만 알려줘.<br/>ChatGPT가 입덕 계기부터 탈덕 이유까지 물어보고, <strong>나만의 덕질 성향과 미래시</strong>를 분석해 줄 거야.</p>
           <div class="hero-actions">
-            <a class="primary-btn" id="start-link" href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer"><span>ChatGPT에서 시작하기</span><span class="button-arrow" aria-hidden="true">↗</span></a>
+            <a class="primary-btn" id="start-link" href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer"><span>프롬프트 복사하고 ChatGPT 열기</span><span class="button-arrow" aria-hidden="true">↗</span></a>
             <button class="secondary-btn" id="copy-button" type="button"><span aria-hidden="true">⧉</span> 프롬프트 복사</button>
           </div>
           <div class="hero-fine"><span aria-hidden="true">✓</span> 회원가입·입력 폼 없음 <span class="fine-divider">·</span> ChatGPT 무료 사용자도 이용 가능*</div>
-          <div class="mini-note">*이미지 생성 등 일부 기능에는 이용 한도가 있어. ChatGPT 링크 자동 입력이 안 되면 <strong>프롬프트 복사</strong>를 사용해 줘.</div>
+          <div class="mini-note">*이미지 생성 등 일부 기능에는 이용 한도가 있어. 시작 버튼을 누르면 전체 프롬프트를 복사하고 ChatGPT를 열어 줘. 새 채팅에 붙여 넣으면 돼.</div>
         </div>
 
         <div class="hero-visual" aria-label="결과 카드 예시 이미지가 아닌 샘플 디자인">
@@ -83,16 +83,16 @@
 
       <section class="faq-section" aria-labelledby="faq-heading"><div class="wrap faq-wrap"><div><div class="section-kicker">FAQ</div><h2 id="faq-heading">궁금한 점</h2></div><div class="faq-list">
         <details><summary>무료 ChatGPT에서도 할 수 있어?<span>＋</span></summary><p>응. 기본 인터뷰와 분석은 무료로 이용할 수 있어. 다만 웹 검색·이미지 생성 등 일부 기능에는 이용 한도가 있고, 결과의 깊이는 사용 환경에 따라 달라질 수 있어.</p></details>
-        <details><summary>왜 버튼을 눌러도 글이 안 채워져?<span>＋</span></summary><p>ChatGPT의 링크 자동 입력 방식은 공식적으로 보장된 연동 기능이 아니라서 기기나 로그인 상태에 따라 작동하지 않을 수 있어. 그럴 때는 '프롬프트 복사'를 누르고 직접 붙여 넣으면 돼.</p></details>
+        <details><summary>시작 버튼을 누르면 어떻게 진행돼?<span>＋</span></summary><p>시작 버튼은 전체 프롬프트를 복사하고 ChatGPT를 새 탭으로 열어 줘. 채팅창에 직접 붙여 넣으면 인터뷰가 시작돼. 복사가 차단되면 '프롬프트 복사' 버튼을 이용해 줘.</p></details>
         <details><summary>결과 카드도 이 사이트에서 만드는 거야?<span>＋</span></summary><p>아니. 이 사이트는 분석 시작을 돕는 링크 페이지일 뿐이야. 인터뷰, 분석, 결과 카드 생성은 모두 네가 연 ChatGPT 대화에서 진행해.</p></details>
         <details><summary>입력한 최애 목록이 사이트에 저장돼?<span>＋</span></summary><p>아니. 이 사이트는 이름이나 기간을 입력받거나 저장하지 않아. ChatGPT에서 나눈 대화는 각자의 계정과 ChatGPT 설정에 따라 처리돼.</p></details>
       </div></div></section>
 
-      <section class="bottom-cta wrap"><div class="bottom-cta-inner"><div><span>READY FOR YOUR FANDOM RECAP?</span><h2>너의 덕질 인생은<br/>어떤 이야기였을까?</h2></div><a id="bottom-start-link" class="bottom-button" href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">분석 시작하기 <span aria-hidden="true">↗</span></a></div></section>
+      <section class="bottom-cta wrap"><div class="bottom-cta-inner"><div><span>READY FOR YOUR FANDOM RECAP?</span><h2>너의 덕질 인생은<br/>어떤 이야기였을까?</h2></div><a id="bottom-start-link" class="bottom-button" href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">복사하고 ChatGPT 열기 <span aria-hidden="true">↗</span></a></div></section>
     </main>
     <footer class="site-footer wrap"><span>♡ 덕질 연대기</span><span>팬이 만든 비공식 프로젝트 · OpenAI와 무관합니다.</span></footer>
   </div>
-  <dialog id="prompt-dialog" class="prompt-dialog" aria-labelledby="prompt-dialog-title"><div class="dialog-head"><h2 id="prompt-dialog-title">ChatGPT에 보내는 프롬프트</h2><button id="close-dialog" type="button" aria-label="닫기">×</button></div><p class="dialog-description">이 프롬프트를 복사해서 ChatGPT에 붙여 넣어도 동일하게 시작할 수 있어.</p><pre id="prompt-content"></pre><div class="dialog-actions"><button id="dialog-copy" class="primary-btn" type="button">프롬프트 복사하기 <span aria-hidden="true">⧉</span></button></div></dialog>
+  <dialog id="prompt-dialog" class="prompt-dialog" aria-labelledby="prompt-dialog-title"><div class="dialog-head"><h2 id="prompt-dialog-title">ChatGPT에 보내는 프롬프트</h2><button id="close-dialog" type="button" aria-label="닫기">×</button></div><p class="dialog-description">이 프롬프트를 복사해서 ChatGPT 새 채팅창에 붙여 넣으면 분석을 시작할 수 있어.</p><pre id="prompt-content"></pre><div class="dialog-actions"><button id="dialog-copy" class="primary-btn" type="button">프롬프트 복사하기 <span aria-hidden="true">⧉</span></button></div></dialog>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
 </body>
 </html>
