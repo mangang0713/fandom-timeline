@@ -1,98 +1,31 @@
 <!doctype html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#f7f8ed" />
-  <meta name="description" content="역대 최애와 덕질 기간만 적으면, ChatGPT가 입덕·탈덕 이야기를 듣고 나만의 덕질 연대기와 X 공유용 결과 카드까지 만들어 줘요." />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="나의 덕질 연대기 | 최애 취향 분석" />
-  <meta property="og:description" content="최애 이름과 기간만 적으면 AI가 내 덕질 인생을 분석하고 결과 카드를 만들어 줌 💚" />
-  <title>나의 덕질 연대기 — 최애 취향 분석</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="prompt.js"></script>
-  <script defer src="app.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8faef">
+  <meta name="description" content="역대 최애와 덕질 기간으로 시작하는 ChatGPT 덕질 연대기 분석. 프롬프트를 복사하고 ChatGPT에서 붙여 넣어 보세요.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="나의 덕질 연대기">
+  <meta property="og:description" content="최애 이름과 기간만 적으면 AI가 입덕·탈덕 계기를 인터뷰하고 덕질 성향과 다음 최애를 분석해 줘요.">
+  <title>나의 덕질 연대기</title>
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="./prompt.js"></script>
+  <script defer src="./app.js"></script>
 </head>
 <body>
-  <div class="page-shell">
-    <header class="site-header wrap">
-      <a class="brand" href="#top" aria-label="나의 덕질 연대기 홈"><span class="brand-icon">♡</span> <span>덕질 연대기<span class="brand-dot">.</span></span></a>
-      <a class="top-link" href="#how-it-works">어떻게 하나요? <span aria-hidden="true">↗</span></a>
-    </header>
-
-    <main id="top">
-      <section class="hero wrap" aria-labelledby="hero-heading">
-        <div class="hero-copy">
-          <div class="eyebrow"><span class="eyebrow-dot"></span> FOR EVERY FANDOM ERA</div>
-          <h1 id="hero-heading">내 최애의<br/><em>역사</em>를 분석해 봐<span class="period">.</span></h1>
-          <p class="hero-lead">누구를 언제 좋아했는지만 알려줘.<br/>ChatGPT가 입덕 계기부터 탈덕 이유까지 물어보고, <strong>나만의 덕질 성향과 미래시</strong>를 분석해 줄 거야.</p>
-          <div class="hero-actions">
-            <a class="primary-btn" id="start-link" href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer"><span>프롬프트 복사하고 ChatGPT 열기</span><span class="button-arrow" aria-hidden="true">↗</span></a>
-            <button class="secondary-btn" id="copy-button" type="button"><span aria-hidden="true">⧉</span> 프롬프트 복사</button>
-          </div>
-          <div class="hero-fine"><span aria-hidden="true">✓</span> 회원가입·입력 폼 없음 <span class="fine-divider">·</span> ChatGPT 무료 사용자도 이용 가능*</div>
-          <div class="mini-note">*이미지 생성 등 일부 기능에는 이용 한도가 있어. 시작 버튼을 누르면 전체 프롬프트를 복사하고 ChatGPT를 열어 줘. 새 채팅에 붙여 넣으면 돼.</div>
-        </div>
-
-        <div class="hero-visual" aria-label="결과 카드 예시 이미지가 아닌 샘플 디자인">
-          <div class="badge-floating badge-top">YOUR BIAS ERA ✳</div>
-          <article class="sample-card" aria-label="예시 결과 카드 미리보기">
-            <div class="card-topline"><span>MY FANDOM ARCHIVE</span><span>✦ 01</span></div>
-            <div class="card-stamp">SAMPLE<br/>ONLY</div>
-            <div class="card-heart" aria-hidden="true">♥</div>
-            <div class="card-intro">나의 덕질 연대기</div>
-            <div class="card-title">취향은<br/>돌아온다<span>!</span></div>
-            <div class="sample-tags"><span>#장기애착형</span><span>#첫눈에입덕</span></div>
-            <div class="card-separator"></div>
-            <div class="sample-stat"><span>최장 덕질</span><strong>7년 1개월</strong></div>
-            <div class="sample-stat"><span>나의 입덕 트리거</span><strong>강렬한 첫인상 ✧</strong></div>
-            <div class="sample-stat"><span>미래시</span><strong>또 다른 취향 저격</strong></div>
-            <div class="sample-footer"><span>♡ MY FANDOM TIMELINE</span><span>DEMO CARD</span></div>
-          </article>
-          <div class="badge-floating badge-bottom">결과 카드는 각자의 ChatGPT가 생성해 줘!</div>
-        </div>
-      </section>
-
-      <section class="steps-section" id="how-it-works" aria-labelledby="steps-heading">
-        <div class="wrap">
-          <div class="section-kicker">HOW IT WORKS</div>
-          <h2 id="steps-heading">딱 세 단계면 끝!</h2>
-          <div class="steps-grid">
-            <article class="step"><span class="step-number">01</span><div class="step-emoji" aria-hidden="true">🗓️</div><h3>최애 연대기 입력</h3><p>출생연도, 역대 최애 이름, 덕질 기간을 편하게 적어 줘. 정확한 날짜는 몰라도 괜찮아.</p></article>
-            <article class="step"><span class="step-number">02</span><div class="step-emoji" aria-hidden="true">💬</div><h3>AI랑 덕질 회고</h3><p>"왜 그때 입덕했어?" "지금도 좋아해?" 중요한 전환점을 중심으로 질문을 받게 돼.</p></article>
-            <article class="step"><span class="step-number">03</span><div class="step-emoji" aria-hidden="true">💟</div><h3>분석 + 결과 카드</h3><p>덕질 유형, 최애 궁합, 미래시를 확인하고 X에 공유할 4:5 이미지 카드까지 받아 봐.</p></article>
-          </div>
-        </div>
-      </section>
-
-      <section class="details-section wrap" aria-labelledby="detail-heading">
-        <div class="detail-main">
-          <div class="section-kicker">WHAT YOU'LL GET</div>
-          <h2 id="detail-heading">덕질 기록에서<br/>찾아내는 <em>나의 취향</em></h2>
-          <div class="feature-stack"><p><span>✳</span> 언제 누구를 좋아했는지, 나이별 최애 타임라인</p><p><span>✳</span> 최애를 바꾼 결정적인 순간과 입덕·탈덕 계기</p><p><span>✳</span> 반복되는 얼굴·분위기·무대 취향과 예외</p><p><span>✳</span> 가장 오래 좋아한 최애, 궁합, 다음 최애 미래시</p><p><span>✳</span> X에 올릴 수 있는 4:5 결과 이미지 카드</p></div>
-          <button id="view-prompt" class="text-btn" type="button">AI에게 보내는 프롬프트 보기 <span aria-hidden="true">↗</span></button>
-        </div>
-        <aside class="chat-preview" aria-label="ChatGPT 대화 흐름 예시">
-          <div class="chat-header"><span class="chat-status"></span> CHATGPT INTERVIEW <span>✦</span></div>
-          <div class="bubble ai"><div class="bubble-avatar">✳</div><p>역대 최애 이름이랑 좋아했던 기간을 적어 줄래? 겹쳐도 괜찮아!</p></div>
-          <div class="bubble user"><p>2016~2018 A그룹 ○○<br/>2018~2025 B그룹 △△<br/>2025~현재 C그룹 □□</p></div>
-          <div class="bubble ai"><div class="bubble-avatar">✳</div><p>2018년에 최애가 바뀌었네. 새 최애가 너무 취향이었던 거야, 아니면 다른 계기가 있었어?</p></div>
-          <div class="chat-end">답변에 맞춰 다음 질문이 달라져 ✨</div>
-        </aside>
-      </section>
-
-      <section class="faq-section" aria-labelledby="faq-heading"><div class="wrap faq-wrap"><div><div class="section-kicker">FAQ</div><h2 id="faq-heading">궁금한 점</h2></div><div class="faq-list">
-        <details><summary>무료 ChatGPT에서도 할 수 있어?<span>＋</span></summary><p>응. 기본 인터뷰와 분석은 무료로 이용할 수 있어. 다만 웹 검색·이미지 생성 등 일부 기능에는 이용 한도가 있고, 결과의 깊이는 사용 환경에 따라 달라질 수 있어.</p></details>
-        <details><summary>시작 버튼을 누르면 어떻게 진행돼?<span>＋</span></summary><p>시작 버튼은 전체 프롬프트를 복사하고 ChatGPT를 새 탭으로 열어 줘. 채팅창에 직접 붙여 넣으면 인터뷰가 시작돼. 복사가 차단되면 '프롬프트 복사' 버튼을 이용해 줘.</p></details>
-        <details><summary>결과 카드도 이 사이트에서 만드는 거야?<span>＋</span></summary><p>아니. 이 사이트는 분석 시작을 돕는 링크 페이지일 뿐이야. 인터뷰, 분석, 결과 카드 생성은 모두 네가 연 ChatGPT 대화에서 진행해.</p></details>
-        <details><summary>입력한 최애 목록이 사이트에 저장돼?<span>＋</span></summary><p>아니. 이 사이트는 이름이나 기간을 입력받거나 저장하지 않아. ChatGPT에서 나눈 대화는 각자의 계정과 ChatGPT 설정에 따라 처리돼.</p></details>
-      </div></div></section>
-
-      <section class="bottom-cta wrap"><div class="bottom-cta-inner"><div><span>READY FOR YOUR FANDOM RECAP?</span><h2>너의 덕질 인생은<br/>어떤 이야기였을까?</h2></div><a id="bottom-start-link" class="bottom-button" href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">복사하고 ChatGPT 열기 <span aria-hidden="true">↗</span></a></div></section>
-    </main>
-    <footer class="site-footer wrap"><span>♡ 덕질 연대기</span><span>팬이 만든 비공식 프로젝트 · OpenAI와 무관합니다.</span></footer>
-  </div>
-  <dialog id="prompt-dialog" class="prompt-dialog" aria-labelledby="prompt-dialog-title"><div class="dialog-head"><h2 id="prompt-dialog-title">ChatGPT에 보내는 프롬프트</h2><button id="close-dialog" type="button" aria-label="닫기">×</button></div><p class="dialog-description">이 프롬프트를 복사해서 ChatGPT 새 채팅창에 붙여 넣으면 분석을 시작할 수 있어.</p><pre id="prompt-content"></pre><div class="dialog-actions"><button id="dialog-copy" class="primary-btn" type="button">프롬프트 복사하기 <span aria-hidden="true">⧉</span></button></div></dialog>
-  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <main class="panel">
+    <div class="symbol" aria-hidden="true">♡</div>
+    <p class="eyebrow">MY FANDOM ARCHIVE</p>
+    <h1>나의 덕질 연대기</h1>
+    <p class="description">역대 최애와 덕질 기간만 알려주면<br class="desktop-break"> ChatGPT가 입덕·탈덕 이야기를 듣고 취향, 미래시와 결과 카드까지 만들어 줘.</p>
+    <div class="actions">
+      <button id="copy-button" type="button" class="primary">프롬프트 복사 <span aria-hidden="true">⧉</span></button>
+      <a class="secondary" href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">ChatGPT로 이동 <span aria-hidden="true">↗</span></a>
+    </div>
+    <p id="status" class="status" role="status" aria-live="polite">① 프롬프트 복사 → ② ChatGPT에서 붙여넣기</p>
+    <p class="fine">인터뷰와 결과 카드 생성은 각자의 ChatGPT에서 진행돼.<br>이미지 생성에는 계정별 이용 한도가 있을 수 있어.</p>
+  </main>
+  <footer>팬이 만든 비공식 링크 페이지 · OpenAI 및 소속사와 무관</footer>
 </body>
 </html>
